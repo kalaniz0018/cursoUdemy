@@ -155,3 +155,6 @@ const suma2 = function(a =3, b =5){
 }
  console.log( suma2(1,2) );
  console.log(suma2 (5));
+
+
+  
