@@ -153,8 +153,49 @@ function saludar(nombre = 'Visitante') {
 const suma2 = function(a =3, b =5){
     return a + b;
 }
- console.log( suma2(1,2) );
- console.log(suma2 (5));
+ //console.log( suma2(1,2) );
+ //console.log(suma2 (5));
 
 
-  
+  //IIFE funciones que se declaran y se invocan inmediatamente 
+ ///(function (tecnologia){
+    // console.log(`Aprendiendo ${tecnologia}`);
+// })('JavaScript');
+ 
+ // Metodos de propiedad
+ // Cuando una función se pone dentro de un objeto y al crear este objeto las funciones que estan dentro se les conoce como método.
+
+ const musica = {
+     reproducir: function(id) { 
+         console.log(`Reproduciendo Canción id ${id}`);
+     },
+     pausar: function(){
+         console.log(`Pause la Música`);
+     }
+ }
+ //Los metodos tambien pueden guardarse o crearse fuera del objeto.
+  musica.borrar = function(id){
+          console.log(`Borrando canción con el ID ${id}`);
+  }
+   musica.reproducir(30); 
+   musica.pausar();
+   musica.borrar(2);
+
+    //Funcion que no existe Try catch, finally se ejecuta siempre por mas q haya o no haya tirado excepción
+
+    try{
+        algo();
+    } catch (error){
+        console.log(error);
+    } finally {
+        console.log("No le importa, ejecuta de todos modos");
+    }
+    
+    function obtenerClientes(){
+        console.log("Descargando...");
+
+        setTimeout(function(){
+             console.log("Completo")
+        }, 3000);
+        
+    }
