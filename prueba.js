@@ -167,15 +167,15 @@ const suma2 = function(a =3, b =5){
 
  const musica = {
      reproducir: function(id) { 
-         console.log(`Reproduciendo Canción id ${id}`);
+         //console.log(`Reproduciendo Canción id ${id}`);
      },
      pausar: function(){
-         console.log(`Pause la Música`);
+         //console.log(`Pause la Música`);
      }
  }
  //Los metodos tambien pueden guardarse o crearse fuera del objeto.
   musica.borrar = function(id){
-          console.log(`Borrando canción con el ID ${id}`);
+          //console.log(`Borrando canción con el ID ${id}`);
   }
    musica.reproducir(30); 
    musica.pausar();
@@ -186,16 +186,44 @@ const suma2 = function(a =3, b =5){
     try{
         algo();
     } catch (error){
-        console.log(error);
+        //console.log(error);
     } finally {
-        console.log("No le importa, ejecuta de todos modos");
+        //console.log("No le importa, ejecuta de todos modos");
     }
     
     function obtenerClientes(){
-        console.log("Descargando...");
+        //console.log("Descargando...");
 
         setTimeout(function(){
-             console.log("Completo")
+             //console.log("Completo")
         }, 3000);
         
     }
+
+    //Fechas
+    //En JavaScript existe un objeto llamadl Date
+
+    const diaHoy = new Date();
+
+    let valor;
+    // Obtener Mes
+    valor = diaHoy.getMonth();
+    // Obtener Dia
+    valor = diaHoy.getDate();
+    valor = diaHoy.getFullYear();
+    //Obtener el Anio
+    valor = diaHoy.getFullYear();
+    //Minutos
+    valor = diaHoy.getMinutes();
+    //Hora
+    valor = diaHoy.getHours();
+    //Segundos
+    valor = diaHoy.getTime();
+
+    valor = diaHoy.getFullYear();
+    valor = diaHoy.getFullYear(2016);
+    valor = diaHoy.getFullYear();
+
+
+     console.log(valor);
+    
