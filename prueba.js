@@ -218,12 +218,148 @@ const suma2 = function(a =3, b =5){
     //Hora
     valor = diaHoy.getHours();
     //Segundos
-    valor = diaHoy.getTime();
 
     valor = diaHoy.getFullYear();
     valor = diaHoy.getFullYear(2016);
     valor = diaHoy.getFullYear();
 
 
-     console.log(valor);
+     //console.log(valor);
+    //Estructura de control, IF, ELSE, ELSEIF
+
+    const edad = 17;
+
+    if(edad >= 18) {
+        //console.log('Puedes entrar al sitio');
+    }else{
+        //console.log('No puedes entrar al sitio');
+    }
+
+   //Como comprbar que una variable tiene un valor
+    let puntaje;
+
+    if(typeof puntaje != 'undefined') {
+        //console.log(`El puntaje fue de ${puntaje}`);
+    }else {
+       // console.log(`No hay puntaje`);
+    }
     
+        let efectivo = 500;
+        let totalCarrito = 300;
+
+        if(efectivo > totalCarrito){
+            //console.log('Pago Correcto');
+        }else{
+            //console.log('Fondos Insuficuentes');
+        }
+
+        let hora = 25;
+        if(hora > 0 && hora <= 10){
+            console.log('Buenos Dias!!');
+        } else if(hora > 10 && hora<=18){
+             //console.log('Buenas Tardes');
+        } else if(hora > 18 && hora<=24){
+             //console.log('Buenas Tardes');
+        } else{
+            //console.log('Hora no valida');
+        }
+        
+        /*Siempre que haya al menos dos opciones, en este caso de puntaje y se cumplan las dos condiciones, 
+            se va a ejecutar la 1ra que encuentre que cumple la condicion queen este caso seria "puntaje /, 150"*/
+
+        let puntajes = 100;
+        if(puntajes < 150){
+            //console.log('Puntajes < 150');
+        }else if (puntajes < 200){
+            //console.log('Puntajes <200');
+        }
+
+        //Operador || 
+        
+        let efectivos = 300,
+            credito = 700,
+            totalesCarrito = 500;
+
+            if(totalesCarrito < efectivos || totalesCarrito < credito || totalesCarrito < disponible) {
+                //console.log('Puedo pagar');
+            } else {
+                //console.log('No puedo pagar');
+            }
+
+            //Ternario, es como unir en una sola linea el IF Y ELSE
+            ///const logueado = true;
+                        //  condicion //   //   IF   // //else//  
+            //console.log(logueado === true ?'Si se logueo' : 'No se logueo');
+              // llaves para el IF ?//  // llaves para el else :/
+
+              //Switch en JavaScript
+              const metodoPago = 'debito';
+
+        switch(metodoPago){
+         case 'efectivo':
+             //console.log(`El usuario pago con ${metodoPago}`);
+             break;
+        case 'cheque':
+            //console.log(`El usuario pago con ${metodoPago}`);
+            break;
+        case 'credito':
+            //console.log(`El usuario pago con ${metodoPago}`);
+            break;
+            default:
+                //console.log('Metodo de pago no disponible');
+                break;
+    }
+            
+    let mes;
+    switch(new Date().getMonth()){
+        case 0:
+            mes = 'Enero';
+            break;
+        case 1:
+            mes = 'Febrero';
+            break;
+        case 2:
+                mes = 'Marzo';
+                break;    
+        case 3:
+                mes = 'Abril';
+                break;
+       case 4:
+                mes = 'Mayo';
+                break; 
+        case 5:
+                mes = 'Junio';
+                break; 
+        case 6:
+                mes = 'Julio';
+                break; 
+        case 7:
+                mes = 'Agosto';
+                break; 
+        case 8:
+                mes = 'Septiembre';
+                break; 
+        case 9:
+                mes = 'Octubre';
+                break; 
+        case 10:
+                mes = 'Novimbre';
+                break;
+        case 11:
+                mes = 'Diciembre';
+                break;
+    }
+    //console.log(`este mes es ${mes}`);
+
+ // For Loops un loop en cualquier lenguaje de programacion usualmente es codigo que se repite una y otra vez hasta que cierta condicion se cumple.
+  //For Loops, la estrucura de un foro es la siguiente... escibis for (condicion) {es el codigo que se va a repetir} lo que esta entre parentesis e=consta de tres partes
+  // 1ro Inicializar un valor  
+  // 2do Son las condiciones de hasta cuando quieres que se corra este codigo, en general pones la misma variable q es la q vas a estar incrementando 
+  // 3ro Cuantas veces quieres que corra
+  // Como ultimo va el Incremento
+
+  for(let i = 0; i < 10; i++){
+      console.log(`Numero: ${i}`);
+  }
+  
+  
