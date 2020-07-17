@@ -466,10 +466,94 @@ const nombreProducto = carrito.map(function(carrito) {
         marca:'Citroen'
     } 
     for( let auto in automovil){
-        console.log(`${auto} : ${automovil[auto]}`);
+       //console.log(`${auto} : ${automovil[auto]}`);
     }
-     console.log(automovil);
+     //console.log(automovil);
 
      //Iteradores en JavaScript ya incluidos
 
-     
+     const ciudades = ['Londres', 'New York', 'Argentina', "Paris"];
+     const ordenes = new Set ([123, 231, 131, 102 ]);
+     const datos = new Map();
+     datos.set('nombre', 'Juan');
+     datos.set('Profesion', 'Desarrollador Web');
+
+     //console.log(ciudades);
+     //console.log(ordenes);
+     //console.log(datos);
+
+    //Entries iterador
+    // Values a las ciudades
+    //for(let entrada of ciudades) {
+    //   console.log(entrada);
+    //}
+
+    //Entries para las ordenes
+    // for(let entradas of ordenes.entries() ){
+    //     console.log(entradas);
+    // }
+
+
+    //Entries para el Map
+    //for (let entrada of datos.entries() ){
+    //  console.log(entrada);
+    // }
+
+    //Window Objects
+
+    let altura,
+        anchura;
+
+        altura = window.outerHeight;   // altura
+        anchura = window.outerWidth;   // ancho
+
+        //console.log(altura);
+        //console.log(anchura);
+
+    //Obteber solo la ventada 
+    
+    altura = window.innerHeight;   
+    anchura = window.innerWidth; 
+
+        //Ubicacion 
+        let ubicacion;
+        ubicacion = window.location;
+        //window.location.href = 'http://twitter.com' para redireccionarlo auomaticamente directo a una pagina que quieras
+
+
+        //Navigator        
+
+        ubicacion = window.navigator;
+
+        //console.log(ubicacion);
+
+         //Scope en JavaScript es la visibilidad que tiene un valor en JS dentro de una funcion, bloque, un for, etc
+
+         var a = 'a';
+         let b = 'b';
+         const c = 'c';
+        //Scoop de la funcion 
+         function funcionScope(){ //estas variables solo existen en esta funcion "funcionScope".
+            var a = 'A';
+            let b = 'B';
+            const c = 'C';
+            console.log('FUNCION: ' +  a,b,c);
+         }
+         funcionScope();
+
+
+
+
+         console.log('GLOBALES:' + a,b,c); // variables globales, no estas dentro de una funcion, bloque de codigo, y puedne ser accedidos por otras funciones y bloques de codigo en cualquier ligar del programa sib globales.
+
+
+        // Scoop de bloque, usuallmente es todo lo qe esta dentro de las llaves {}
+         if(true) {
+            var a = 'AA';
+            let b = 'BB';
+            const c = 'CC';
+             console.log('BLOQUE: ' +  a,b,c);
+         }
+
+        // Lo mas importante es que este codigo es ej var puede ser global sin embargo en la ejecucion del programa si puede ser modificado, y modificar las variables globales q no es correcto.
+        // Mientras Let y Const estas variables son reescritas dentro de la funcion, bloque de codigo se quedan en esos bloques de codigo y esas funciones y no afectan lo que viene siendo las variables globales.
