@@ -358,8 +358,118 @@ const suma2 = function(a =3, b =5){
   // 3ro Cuantas veces quieres que corra
   // Como ultimo va el Incremento
 
+  //for(let i = 0; i < 10; i++){
+      //console.log(`Numero: ${i}`);
+  //}
+  
   for(let i = 0; i < 10; i++){
-      console.log(`Numero: ${i}`);
+      if(i == 5) {
+          //console.log('voy en el 5');
+          continue;
+      }
+      //console.log(`${i}`);
   }
+  //Otra manera es en vez de 'continue', poner break que se va a detener hasta el 5. 
   
-  
+
+  for(let i = 0; i < 10; i++){
+      if(i % 2 == 0) {
+          //console.log(`El numero ${i}es Par`);
+      }else{
+        //console.log(`El numero ${i}es Impar`);
+      }
+  }
+
+  const arregloProducto = ['Camisa','Boleto','Guitarra','Disco'];
+
+
+
+  for(let i = 0; i < arregloProducto.length; i++){
+        //console.log(`Tu Producto ${arregloProducto[i]} fue agregado`);
+  }
+
+  //While  si el arreglo queda vacio, no recorre ni una vez, lo que hace el while es revisar que la condicion se cumpla antes de correr el codigo 
+
+   
+  let i = 0;
+
+  while(i < 10) {
+
+      if(i === 5) {
+          //console.log('cinco');
+          i++;
+          break;
+      }
+      //console.log(`Numero: ${i}`);
+      i++;
+  }
+ 
+  const musicaaa = ['Cancion 1','Cancion 2','Cancion 3'];
+
+  i = 0;
+
+  while( i < musicaaa.length){
+
+      //console.log(`Reproduciendo la cancion ${musicaaa[i]}`);
+       i++;
+  }
+
+  //Do While Loop tiene caracteristica en la que corre el codigo al menos una vez sin importar si la condicion se cumple o no.
+   
+  //let i = 1000;
+
+  do{
+      //console.log(`Numero: ${i}`);
+      i++;
+  }while( i < 10);
+
+  //ForEach, Map e iteradores
+
+  //ForEach para recorrer un arreglo
+
+  const pendientes = ['Tareas','Comer','Proyecto','Aprender JavaScript'];
+
+  //For
+   for(let i = 0; i < pendientes.length; i++){
+       //console.log(pendientes[i]);
+   }
+
+   //ForEach
+
+   pendientes.forEach(function(pendiente,index){
+      // console.log(`${index}: ${pendiente}`);
+   });
+
+
+  //console.log(pendientes);
+
+  //Map, se puede utilizar para recorrer este carrito, const, nombre, nombre del producto para acceder a cada uno de ellos va a ser igual a... y tenemos que usar el nombre del arreglo que queremos recorrer
+
+  const carrito = [ 
+      {id: 1, producto: 'Libro'},
+      {id: 2, producto: 'Camisa'},
+      {id: 3, producto: 'Guitarra'},
+      {id: 4, producto: 'Disco'},
+    ];
+const nombreProducto = carrito.map(function(carrito) {
+    return carrito.producto;
+})
+
+    //console.log(carrito);
+
+    //For
+
+    const automovil = {
+        modelo: 'C4',
+        motor:'6.1',
+        Anio:'2007',
+        marca:'Citroen'
+    } 
+    for( let auto in automovil){
+        console.log(`${auto} : ${automovil[auto]}`);
+    }
+     console.log(automovil);
+
+     //Iteradores en JavaScript ya incluidos
+
+     
