@@ -354,9 +354,8 @@ const suma2 = function(a =3, b =5){
  // For Loops un loop en cualquier lenguaje de programacion usualmente es codigo que se repite una y otra vez hasta que cierta condicion se cumple.
   //For Loops, la estrucura de un foro es la siguiente... escibis for (condicion) {es el codigo que se va a repetir} lo que esta entre parentesis e=consta de tres partes
   // 1ro Inicializar un valor  
-  // 2do Son las condiciones de hasta cuando quieres que se corra este codigo, en general pones la misma variable q es la q vas a estar incrementando 
-  // 3ro Cuantas veces quieres que corra
-  // Como ultimo va el Incremento
+  // 2do Son las condiciones de hasta cuando quieres que se corra este codigo, en general pones la misma variable q es la q vas a estar incrementando, Cuantas veces quieres que corra
+  // 3ro Como ultimo va el Incremento
 
   //for(let i = 0; i < 10; i++){
       //console.log(`Numero: ${i}`);
@@ -555,5 +554,184 @@ const nombreProducto = carrito.map(function(carrito) {
              console.log('BLOQUE: ' +  a,b,c);
          }
 
-        // Lo mas importante es que este codigo es ej var puede ser global sin embargo en la ejecucion del programa si puede ser modificado, y modificar las variables globales q no es correcto.
-        // Mientras Let y Const estas variables son reescritas dentro de la funcion, bloque de codigo se quedan en esos bloques de codigo y esas funciones y no afectan lo que viene siendo las variables globales.
+        /* Lo mas importante es que este codigo es ej var puede ser global sin embargo en la ejecucion del programa si puede ser modificado, y modificar las variables globales q no es correcto.
+         Mientras Let y Const estas variables son reescritas dentro de la funcion, bloque de codigo se quedan en esos bloques de codigo y esas funciones y no afectan lo que viene siendo las variables globales.*/
+
+
+        /* ---------------------------------------------------------DOM-------------------------------------------------------------------------------------------- */
+
+       // let elemento;
+
+        elemento = document;
+        elemento = document.all;
+        elemento = document.all[10];
+        elemento = document.head;
+        elemento = document.body;
+        elemento = document.domain;
+        elemento = document.URL;
+        elemento = document.characterSet;
+        elemento = document.forms;
+        elemento = document.forms[0];
+        elemento = document.forms[0].id;
+        elemento = document.forms[0].className;
+        elemento = document.forms[0].classList;
+        elemento = document.forms[0].classList[0];
+
+        elemento = document.images;
+        elemento = document.images[2];
+        elemento = document.images[2].getAttribute('src');
+
+        //scripts
+        
+        elemento = document.scripts;
+
+        elemento = document.images;
+
+       // let imagenes = document.images;
+        //let imagenesArr = Array.from(imagenes);
+
+        imagenesArr.forEach(function(imagen){
+            //console.log(imagen);
+        });
+            
+            //console.log(imagenesArr);*/
+
+
+        // getElementById
+
+        //let encabezado;
+
+        encabezado = document.getElementById('encabezado');
+        encabezado.style.background = '#333';
+        encabezado.style.color  = '#fff';
+        encabezado.style.padding = '20px';
+
+        // Cambiar el Texto
+
+        encabezado.innerText = 'Los mejores Cursos';
+
+        //console.log(encabezado.innerText);
+
+        //---------------------getElementsByClassName-----------------------//
+
+        //Seleccionar elementos por su clase...
+
+        ///const header = document.getElementsByClassName('header');
+        //console.log(header);
+
+        //const hero = document.getElementsByClassName('hero');
+        //console.log(hero);
+
+        //Si las clases existen mas de 1 vez 
+
+        //const contenedores = document.getElementsByClassName('contenedor');
+        //console.log(contenedores);
+
+        //Si una clase no existe 
+        //const noExiste = document.getElementsByClassName('no-existe');
+        //console.log(noExiste);
+
+
+        ///---------------------------------getElementById--------------------------------// 
+
+        // const formulario = document.getElementById('formulario');
+       // console.log(formulario);
+
+       //-----------------------------------------queruSelector----------------------------//
+
+       //const card = document.querySelector('.card');
+       //console.log(card);
+
+       //Podemos tener sectores especificos como es CSS
+
+       //const info = document.querySelector('.premiuim.info');
+       //console.log(info);
+
+       // Seleccionar el segundo card de hospedaje 
+       //const segundoCard = document.querySelector('section.hospedaje.card:nth-child(2)');
+       //console.log(segundoCard);
+
+       //Seleccionar Formulario 
+       //const formulario = document.querySelector('.contenido-hero #formulario');
+       //console.log(formulario);
+
+       //Seleccionar elemento en HTML
+
+       //const navegacion = document.querySelector('nav');
+       //console.log(navegacion);
+
+       // ------------------------------------querySelectorAll-------------------------------------//
+
+        //const card = document.querySelectorAll('.card');
+       //console.log(card);
+
+        //const formularios = document.querySelectorAll('#formulario');
+       //console.log(formularios);
+
+        //const noExiste = document.querySelectorAll('no-existe');
+       //console.log(noExiste);
+
+        //-------------------------------Modificar Textos o Imagenes con JS--------------------------//
+
+        //const encabezado = document.querySelector('.contenido-hero h1');
+        //console.log(encabezado);
+
+        //console.log(encabezado.innerText);// Si en el CSS - visibility: hidden; no lo va a encontrar
+        //console.log(encabezado.textContent);// Si lo va a encontrar
+        //console.log(encabezado.innerHTML);// Se trae el HTML
+
+        // const nuevoHeading = 'Nuevo Heading';
+        // document.querySelector('.contenido-hero h1').textContent = nuevoHeading;
+
+        //const magen = document.querySelector('.card img');
+        imagen.src = 'img/hacer2.jpg';
+
+        //-------------------------Cambiando el CSS con JS---------------------------------//
+
+        //const card = document.querySelector('.card');
+        card.classList.add('nueva-clase', 'segunda-clase');
+        card.classList.remover('card');
+        //console.log(card.classList);
+
+        //-----------------------------Traversing the DOM---------------------------//
+
+        //const card = document.querySelector('.card');
+        card.classList.add('nueva-clase', 'segunda-clase');
+        card.classList.remove('card');
+        //console.log(card.classList);
+
+        //--------------------------------Eliminar elementos del DOM------------------//
+
+        // const primerEnlace = document.querySelector('a');
+        //primerEnlace.remover();
+
+        //Eliminar desde el padre
+
+        //const navegacion = document.querySelector('.navegacion');
+        //console.log(navegacion.children);
+        navegacion.removeChild(navegacion.children[2]);
+
+
+        //-----------------------------------Generar HTML con JS--------------------------------//
+
+        //const enlace = document.createElement('A');
+
+        // Agregandole el texto
+
+        enlace.textContent = 'Nuevo Enlace';
+
+        //Aniadiendo href
+        enlace.href = '/nuevo-enlace';
+         //console.log(enlace);
+
+         enlace.target = "_blanck";
+
+         enlace.setAttribute('data-enlace', 'nuevo_enlace')
+         MediaElementAudioSourceNode.classList.add('alguna-clase')
+
+         //seleccionar la navegacion 
+          //const navegacion =  document.querySelector('.navegacion');
+           //console.log(navegacion.children);
+           navegacion.insertBefore(enlace, navegacion.children [1]);
+
+
